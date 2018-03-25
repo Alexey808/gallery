@@ -1,0 +1,212 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+}
+
+
+.gallery__title {
+	text-align: center;
+    color: #656565;
+    font-size: 50px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    text-shadow: 3px 4px 2px #afafaf, 0 0 8px #b7b7b7;
+}
+
+/* Миниатюры */
+
+.gallery__item {
+	display: inline-block;
+	width: 400px;
+	height: 250px;
+	text-align: left;
+	background-color: #fff;
+	margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	cursor: pointer;
+	position: relative; 
+
+}
+
+.gallery__item:hover {
+	box-shadow: 0 0 10px rgb(51, 113, 130);
+	transform: scale(1.01);
+	background-size: 101%;
+
+}
+
+.gallery__item-picture {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; 
+	min-width: 100%;
+	height: 88%;
+}
+
+.gallery__box {
+    width: 1230px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #656565;
+}
+
+/* --- Добавление элементов --- */
+
+.gallery__form {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: fixed;
+	background-color: rgba(51, 51, 51, 0.60);
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+	opacity: 0;
+	top: 0;
+
+}
+
+.form {
+	width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px 10px 0 10px;
+    position: relative;
+}
+
+.gallery__item-comment {
+	margin: 0;
+    height: 12%;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    border-top: 1px solid #a7a7a7;
+    overflow: hidden;
+    line-height: 25px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.form__elem {
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+
+}
+
+.form__elem--url {
+	justify-content: flex-start;
+}
+
+.form__url-input {
+	width: 543px;
+    margin-left: 5px;
+    padding-left: 3px;
+}
+
+.form__comment-text {
+	width: 500px;
+}
+
+.form__btn-clear, .form__btn-insert {
+	cursor: pointer;
+}
+
+.form__btn-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+.gallery__form-plus:after {
+	content: '+';
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #a7a7a7;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.gallery__form-plus:hover {
+	text-shadow: 0px 0px 3px #000000, 0 0 8px #03a4ff;
+}
+
+/* --- present или показ элементов --- */
+
+.gallery__present {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(51, 51, 51, 0.60);
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 0px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.present {
+    width: 80%;
+    text-align: center;
+}
+
+.present__container {
+	margin: 0 auto 20px;
+}
+
+.present__picture img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.present__comment {
+	display: flex;
+}
+
+.present__txt {
+	flex: 1 0 0;
+	font-family: sans-serif;
+	color: #333;
+}
+
+.present__btn {
+	width: 100px;
+    margin-left: 3px;
+}
+
+/* --- анимация --- */
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+

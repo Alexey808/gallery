@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Gallery</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script async type="text/javascript" src="js/index.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=es6"></script>
+
+</head>
+<body>
+
+
+    <div class="gallery">
+
+        <h1 class=gallery__title>Gallery</h1>
+
+
+      <!-- Добавление -->
+        <div id="galleryForm" class="gallery__form">
+            <form name="gallery" method="post" action="" class="form">
+                <div class="form__elem form__elem--url">
+                    <label for="inputUrl" class="form__url-label">url: </label>
+                    <input type="text" id="inputUrl" name="text"  class="form__url-input" value="http://www.talentsparkle.com/wp-content/uploads/2017/02/Frontend.png">
+                </div>
+                <div class="form__elem form__elem--comment">
+                    <label for="inputComment" class="form__comment-label">Коментарий: </label>
+                    <textarea name="comment" id="inputComment" cols="100" rows="3" name="comment" class="form__comment-text">Коментарий</textarea>
+                </div>
+                <div class="form__elem form__elem--btn">
+                    <input class="form__btn-clear" type="reset" value="Очистить">
+                    <input class="form__btn-insert" type="button" value="Вставить">
+                    <button class="form__btn-close">x</button>
+                </div>
+            </form>
+        </div>
+        <!-- /Добавление -->
+ 
+
+      <!-- Миниатюры -->
+        <div id="galleryBox" class="gallery__box">
+         <!--
+         <div class="gallery__item">
+            <div class="gallery__item-picture"></div>
+            <p class="gallery__item-comment">Коментарий</p>
+         </div>
+         -->
+        </div>
+        <!-- /Миниатюры -->
+
+
+      <!-- Показ и редактирование комментарьев -->
+        <div class="gallery__present" id="galleryPresent">
+            <div class="present">
+                <div class="present__container">
+                    <div class="present__picture">
+                        <!-- 
+                        <img class="present__img"></img> 
+                        -->
+                    </div>
+                    <div class="present__comment">
+                        <textarea class="present__txt"></textarea>
+                        <button class="present__btn">Ввести</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Показ и редактирование комментарьев -->
+
+    </div>
+
+</body>
+</html>
+
+<!-- Ссылки для теста
+
+http://www.talentsparkle.com/wp-content/uploads/2017/02/Frontend.png
+
+https://avochka.ru/img/kartinka/1/foto_s_krasivym_leopardom.jpg
+
+https://get.wallhere.com/photo/sunlight-sunset-sea-rock-nature-shore-reflection-sky-beach-sunrise-evening-morning-coast-horizon-rocks-dusk-cloud-dawn-ocean-wave-material-computer-wallpaper-body-of-water-wind-wave-209121.jpg
+
+-->
